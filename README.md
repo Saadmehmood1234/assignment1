@@ -82,6 +82,5 @@ App will run on http://localhost:3000
 
 ✍️ Author
 Saad Mehmood
-🌐 LinkedIn
 📧 mehmoodsaad347@gmail.com
 
