@@ -34,13 +34,14 @@ Tailwind CSS for utility styling
 Context API for shared checkbox state
 
 📁 File Structure
-bash
-Copy
-Edit
+
 src/
-├── App.tsx              # Main app component
+├── App.tsx      
+
 ├── context/
-│   └── CheckContext.tsx # Shared state for checkbox management
+
+│   └── CheckContext.tsx 
+
 🧪 How It Works
 1. 📥 Data Fetching
 Artwork data is fetched using Axios from the Art Institute of Chicago API. Pagination is handled via API query params.
@@ -59,9 +60,7 @@ The first N rows in the current page will be checked when searched.
 
 🚀 Getting Started
 1. Clone the repository
-bash
-Copy
-Edit
+
 git clone https://github.com/your-username/artworks-table-app.git
 cd artworks-table-app
 2. Install dependencies
