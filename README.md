@@ -1,69 +1,87 @@
-# React + TypeScript + Vite
+This project is a React-based frontend application that fetches and displays artwork data from the Art Institute of Chicago's API using PrimeReact components. It includes features such as pagination, row selection via checkboxes, search-based selection, and loading indicators.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Built for GrowMeOrganic assignment by Saad Mehmood
 
-Currently, two official plugins are available:
+📸 Preview
+Displays a paginated and searchable data table of artworks with checkboxes, search-based selection, and overlay filter input.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 Features
+✅ Fetches paginated artwork data from https://api.artic.edu/api/v1/artworks
 
-## Expanding the ESLint configuration
+📃 Display using PrimeReact's powerful DataTable and Paginator
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔄 Pagination and dynamic row update
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🔍 Search for a number of rows and auto-select first N rows
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+✔️ Checkbox selection (individual + "select all")
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚡ Loading spinner using ProgressSpinner
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📚 Overlay panel for row filtering
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🧠 Persistent checkbox selection using context (CheckContext)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠️ Tech Stack
+React
+
+PrimeReact (DataTable, Paginator, Checkbox, Button, Spinner, etc.)
+
+Axios for HTTP requests
+
+Tailwind CSS for utility styling
+
+Context API for shared checkbox state
+
+📁 File Structure
+bash
+Copy
+Edit
+src/
+├── App.tsx              # Main app component
+├── context/
+│   └── CheckContext.tsx # Shared state for checkbox management
+🧪 How It Works
+1. 📥 Data Fetching
+Artwork data is fetched using Axios from the Art Institute of Chicago API. Pagination is handled via API query params.
+
+2. ✅ Checkbox Management
+Checkboxes are rendered in each row with their state managed by CheckContext.
+
+"Select All" toggles all visible checkboxes.
+
+Checkbox state is preserved across pagination.
+
+3. 🔍 Row Selection via Search
+An overlay form allows the user to enter a number (N).
+
+The first N rows in the current page will be checked when searched.
+
+🚀 Getting Started
+1. Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/artworks-table-app.git
+cd artworks-table-app
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+# or
+yarn
+3. Start the dev server
+bash
+Copy
+Edit
+npm run dev
+# or
+yarn dev
+App will run on http://localhost:3000
+
+✍️ Author
+Saad Mehmood
+🌐 LinkedIn
+📧 mehmoodsaad347@gmail.com
+
