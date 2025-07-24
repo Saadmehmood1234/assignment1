@@ -36,6 +36,7 @@ Context API for shared checkbox state
 📁 File Structure
 
 src/
+
 ├── App.tsx      
 
 ├── context/
